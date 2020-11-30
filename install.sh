@@ -50,6 +50,9 @@ echo
 echo "Create symbolic links"
 ln -rs alacritty.yml $HOME/.alacritty.yml
 ln -rs makepkg.conf $HOME/.makepkg.conf
+mkdir -p $HOME/.config/nvim
+ln -rs init.vim $HOME/.config/nvim/init.vim
+ln -rs tmux.conf $HOME/.tmux.conf
 ln -rs zshrc.local $HOME/.zshrc.local
 
 echo
