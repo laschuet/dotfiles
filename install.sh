@@ -52,11 +52,14 @@ ln -rs alacritty.yml $HOME/.alacritty.yml
 ln -rs makepkg.conf $HOME/.makepkg.conf
 mkdir -p $HOME/.config/nvim
 ln -rs init.vim $HOME/.config/nvim/init.vim
+mkdir -p "$HOME/.config/Code - OSS/User"
+ln -rs settings.json "$HOME/.config/Code - OSS/User/settings.json"
 ln -rs tmux.conf $HOME/.tmux.conf
 ln -rs zshrc.local $HOME/.zshrc.local
 
 echo
 echo "Installing Visual Studio Code extensions..."
+code --install-extension arcticicestudio.nord-visual-studio-code
 code --install-extension editorconfig.editorconfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension julialang.language-julia
