@@ -55,6 +55,8 @@ ln -rs init.vim $HOME/.config/nvim/init.vim
 mkdir -p "$HOME/.config/Code - OSS/User"
 ln -rs settings.json "$HOME/.config/Code - OSS/User/settings.json"
 ln -rs tmux.conf $HOME/.tmux.conf
+mkdir -p $HOME/.config/vifm
+ln -rs vifmrc $HOME/.config/vifm/vifmrc
 ln -rs zshrc.local $HOME/.zshrc.local
 
 echo
