@@ -48,16 +48,16 @@ fi
 
 echo
 echo "Create symbolic links"
-ln -rs alacritty.yml $HOME/.alacritty.yml
-ln -rs makepkg.conf $HOME/.makepkg.conf
+ln -rsf alacritty.yml $HOME/.alacritty.yml
+ln -rsf makepkg.conf $HOME/.makepkg.conf
 mkdir -p $HOME/.config/nvim
-ln -rs init.vim $HOME/.config/nvim/init.vim
+ln -rsf init.vim $HOME/.config/nvim/init.vim
 mkdir -p "$HOME/.config/Code - OSS/User"
-ln -rs settings.json "$HOME/.config/Code - OSS/User/settings.json"
-ln -rs tmux.conf $HOME/.tmux.conf
+ln -rsf settings.json "$HOME/.config/Code - OSS/User/settings.json"
+ln -rsf tmux.conf $HOME/.tmux.conf
 mkdir -p $HOME/.config/vifm
-ln -rs vifmrc $HOME/.config/vifm/vifmrc
-ln -rs zshrc.local $HOME/.zshrc.local
+ln -rsf vifmrc $HOME/.config/vifm/vifmrc
+ln -rsf zshrc.local $HOME/.zshrc.local
 
 echo
 echo "Installing Visual Studio Code extensions..."
@@ -71,4 +71,3 @@ echo
 echo "Manually resolve the following issues"
 echo "- Enter a tmux session, and install the tmux plugins with <TMUX-PREFIX> + I"
 echo "- Open Neovim, and install plugins with :PlugInstall"
-
