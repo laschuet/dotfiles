@@ -1,0 +1,26 @@
+set ignorecase
+set incsearch
+set runexec
+set scrolloff=1
+set smartcase
+set syscalls
+set trash
+set trashdir=$HOME/.trash
+set vicmd=nvim
+set wildmenu
+set wildstyle=popup
+
+filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt libreoffice %f &
+
+command! za 7z a %f.zip %f %a
+command! zx 7z x %f
+
+nnoremap s :shell<cr>
+nnoremap S :sort<cr>
+
+nnoremap <f3> :!less %f<cr>
+nnoremap <f4> :edit<cr>
+nnoremap <f5> :copy<cr>
+nnoremap <f6> :move<cr>
+nnoremap <f7> :mkdir<space>
+nnoremap <f8> :delete<cr>
