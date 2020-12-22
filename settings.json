@@ -1,3 +1,13 @@
 {
-    "workbench.colorTheme": "Nord"
+    "editor.folding": false,
+    "editor.glyphMargin": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.minimap.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderIndentGuides": false,
+    "explorer.openEditors.visible": 0,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Nord",
+    "workbench.editor.showIcons": false,
+    "workbench.editor.tabCloseButton": "off",
 }
