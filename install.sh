@@ -19,10 +19,13 @@ gsettings set org.gnome.desktop.calendar show-weekdate true
 gsettings set org.gnome.desktop.datetime automatic-timezone true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.desktop.interface clock-show-weekday true
+gsettings set org.gnome.desktop.interface document-font-name 'DejaVu Sans 11'
 gsettings set org.gnome.desktop.interface font-name 'DejaVu Sans 11'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Hack 11'
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'DejaVu Sans 11'
+gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 
 echo
 echo "Installing plugin manager for tmux..."
