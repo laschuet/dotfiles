@@ -1,5 +1,6 @@
 {
     "editor.folding": false,
+    "editor.fontFamily": "Hack",
     "editor.glyphMargin": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.minimap.enabled": false,
@@ -10,4 +11,7 @@
     "workbench.colorTheme": "Nord",
     "workbench.editor.showIcons": false,
     "workbench.editor.tabCloseButton": "off",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "window.titleBarStyle": "custom"
 }
