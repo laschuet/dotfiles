@@ -12,6 +12,7 @@ set wildstyle=popup
 
 filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt libreoffice %f &
 filextype *.pdf evince %f &
+filextype *.mp3,*.wav mpv %f
 
 command! za 7z a %f.zip %f %a
 command! zx 7z x %f
