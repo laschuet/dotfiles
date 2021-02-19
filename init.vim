@@ -15,16 +15,45 @@ set tabstop=4
 set termguicolors
 set updatetime=1000
 
+set completeopt=menuone,noinsert,noselect
+set shortmess+=c
+
 call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'arcticicestudio/nord-vim'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'jpalardy/vim-slime'
+    Plug 'JuliaEditorSupport/julia-vim'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
     Plug 'tpope/vim-surround'
 call plug#end()
 
 colorscheme nord
 
+lua << EOF
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+        vim.lsp.diagnostic.on_publish_diagnostics, {
+            virtual_text=false,
+            signs=true,
+            update_in_insert=true,
+        }
+    )
+    local lspconfig = require'lspconfig'
+    local on_attach_vim = function(client)
+        require'completion'.on_attach(client)
+    end
+    lspconfig.julials.setup({on_attach=on_attach_vim})
+EOF
+
 let g:slime_target='tmux'
 let g:slime_default_config={'socket_name': get(split($TMUX, ","), 0), 'target_pane': ':.1'}
 let g:slime_dont_ask_default=1
+
+let g:completion_timer_cycle=250
+let g:completion_matching_ignore_case=1
+
+inoremap <expr> <Tab> pumvisible() ? '\<C-n>' : '\<Tab>'
+inoremap <expr> <S-Tab> pumvisible() ? '\<C-p>' : '\<S-Tab>'
+imap <Tab> <Plug>(completion_smart_tab)
+imap <S-Tab> <Plug>(completion_smart_s_tab)
