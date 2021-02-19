@@ -12,6 +12,7 @@ set scrolloff=1
 set shiftwidth=4
 set smartcase
 set tabstop=4
+set termguicolors
 set updatetime=1000
 
 call plug#begin('~/.vim/plugged')
