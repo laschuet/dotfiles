@@ -26,6 +26,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'JuliaEditorSupport/julia-vim'
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
+    Plug 'reedes/vim-pencil'
     Plug 'tpope/vim-surround'
 call plug#end()
 
@@ -52,6 +53,13 @@ let g:slime_dont_ask_default=1
 
 let g:completion_timer_cycle=250
 let g:completion_matching_ignore_case=1
+
+augroup pencil
+    autocmd!
+    autocmd FileType markdown call pencil#init()
+    autocmd FileType text call pencil#init()
+    autocmd FileType tex call pencil#init()
+augroup END
 
 inoremap <expr> <Tab> pumvisible() ? '\<C-n>' : '\<Tab>'
 inoremap <expr> <S-Tab> pumvisible() ? '\<C-p>' : '\<S-Tab>'
