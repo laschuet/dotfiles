@@ -7,6 +7,9 @@ set expandtab
 set hlsearch
 set ignorecase
 set incsearch
+set noru
+set noshowcmd
+set noshowmode
 set number
 set scrolloff=1
 set shiftwidth=4
@@ -22,6 +25,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'arcticicestudio/nord-vim'
     Plug 'editorconfig/editorconfig-vim'
+    Plug 'itchyny/lightline.vim'
     Plug 'jpalardy/vim-slime'
     Plug 'JuliaEditorSupport/julia-vim'
     Plug 'junegunn/goyo.vim'
@@ -30,6 +34,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-lua/completion-nvim'
     Plug 'reedes/vim-pencil'
     Plug 'tpope/vim-surround'
+    Plug 'vimpostor/vim-tpipeline'
 call plug#end()
 
 colorscheme nord
@@ -55,6 +60,10 @@ let g:slime_dont_ask_default=1
 
 let g:completion_timer_cycle=250
 let g:completion_matching_ignore_case=1
+
+let g:tpipeline_cursormoved=1
+
+let g:lightline={'colorscheme': 'nord'}
 
 augroup pencil
     autocmd!
