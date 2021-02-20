@@ -25,6 +25,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jpalardy/vim-slime'
     Plug 'JuliaEditorSupport/julia-vim'
     Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
     Plug 'reedes/vim-pencil'
@@ -70,6 +71,7 @@ function! s:goyo_enter()
     set noshowmode
     set noshowcmd
     set scrolloff=999
+    Limelight
 endfunction
 
 function! s:goyo_leave()
@@ -80,6 +82,7 @@ function! s:goyo_leave()
     set showmode
     set showcmd
     set scrolloff=1
+    Limelight!
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
