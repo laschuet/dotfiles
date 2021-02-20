@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'editorconfig/editorconfig-vim'
     Plug 'jpalardy/vim-slime'
     Plug 'JuliaEditorSupport/julia-vim'
+    Plug 'junegunn/goyo.vim'
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
     Plug 'reedes/vim-pencil'
@@ -60,6 +61,29 @@ augroup pencil
     autocmd FileType text call pencil#init()
     autocmd FileType tex call pencil#init()
 augroup END
+
+function! s:goyo_enter()
+    if executable('tmux') && strlen($TMUX)
+        silent !tmux set status off
+        silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+    endif
+    set noshowmode
+    set noshowcmd
+    set scrolloff=999
+endfunction
+
+function! s:goyo_leave()
+    if executable('tmux') && strlen($TMUX)
+        silent !tmux set status on
+        silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+    endif
+    set showmode
+    set showcmd
+    set scrolloff=1
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 inoremap <expr> <Tab> pumvisible() ? '\<C-n>' : '\<Tab>'
 inoremap <expr> <S-Tab> pumvisible() ? '\<C-p>' : '\<S-Tab>'
