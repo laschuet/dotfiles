@@ -1,5 +1,6 @@
 window:
   decorations: none
+  startup_mode: Maximized
 
 # Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
 # Copyright (c) 2017-present Sven Greb <code@svengreb.de>
