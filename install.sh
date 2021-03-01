@@ -68,6 +68,7 @@ code --install-extension arcticicestudio.nord-visual-studio-code
 code --install-extension editorconfig.editorconfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension julialang.language-julia
+code --install-extension svelte.svelte-vscode
 code --install-extension vscodevim.vim
 
 echo
