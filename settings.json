@@ -13,5 +13,6 @@
     "workbench.editor.tabCloseButton": "off",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+    "workbench.startupEditor": "none"
 }
