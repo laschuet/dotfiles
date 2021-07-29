@@ -23,6 +23,7 @@ gsettings set org.gnome.desktop.interface document-font-name 'DejaVu Sans 11'
 gsettings set org.gnome.desktop.interface font-name 'DejaVu Sans 11'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Hack 11'
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'DejaVu Sans 11'
 gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
@@ -41,11 +42,11 @@ echo "Installing Julia..."
 if [[ -f /bin/julia ]]; then
     echo "Julia is already installed" 
 else
-    curl -O https://julialang-s3.julialang.org/bin/linux/x64/1.5/julia-1.5.3-linux-x86_64.tar.gz
-    tar xfz julia-1.5.3-linux-x86_64.tar.gz
-    rm julia-1.5.3-linux-x86_64.tar.gz
-    sudo mv julia-1.5.3 /opt
-    sudo ln -s /opt/julia-1.5.3 /opt/julia
+    curl -O https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.2-linux-x86_64.tar.gz
+    tar xfz julia-1.6.2-linux-x86_64.tar.gz
+    rm julia-1.6.2-linux-x86_64.tar.gz
+    sudo mv julia-1.6.2 /opt
+    sudo ln -s /opt/julia-1.6.2 /opt/julia
     sudo ln -s /opt/julia/bin/julia /bin/julia
 fi
 
@@ -60,7 +61,7 @@ ln -rsf settings.json "$HOME/.config/Code - OSS/User/settings.json"
 ln -rsf tmux.conf $HOME/.tmux.conf
 mkdir -p $HOME/.config/vifm
 ln -rsf vifmrc $HOME/.config/vifm/vifmrc
-ln -rsf zshrc.local $HOME/.zshrc.local
+ln -rsf config.fish $HOME/.config/fish/config.fish
 
 echo
 echo "Installing Visual Studio Code extensions..."
