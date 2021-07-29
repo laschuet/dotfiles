@@ -69,7 +69,6 @@ augroup pencil
     autocmd!
     autocmd FileType markdown call pencil#init()
     autocmd FileType text call pencil#init()
-    autocmd FileType tex call pencil#init()
 augroup END
 
 function! s:goyo_enter()
