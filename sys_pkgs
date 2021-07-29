@@ -2,14 +2,11 @@ alacritty
 biber
 code
 discord
-docker
 fakeroot
 firefox
 fish
 gimp
 git
-gnome-tweaks
-grml-zsh-config
 htop
 hunspell
 hunspell-de
@@ -21,6 +18,7 @@ imagemagick
 inkscape
 java-environment
 keepassxc
+libertinus-font
 libreoffice-fresh
 make
 man
@@ -39,6 +37,7 @@ pandoc
 papirus-icon-theme
 python-pynvim
 seahorse
+signal-desktop
 telegram-desktop
 texlive-most
 texlive-lang
@@ -56,6 +55,3 @@ ttf-roboto
 ttf-roboto-mono
 vifm
 wl-clipboard
-zsh-autosuggestions
-zsh-completions
-zsh-syntax-highlighting
