@@ -76,3 +76,4 @@ echo
 echo "Manually resolve the following issues"
 echo "- Enter a tmux session, and install the tmux plugins with <TMUX-PREFIX> + I"
 echo "- Open Neovim, and install plugins with :PlugInstall"
+echo "- Run fish_config, and select and set the Nord theme"
