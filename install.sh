@@ -66,6 +66,7 @@ ln -rsf config.fish $HOME/.config/fish/config.fish
 echo
 echo "Installing Visual Studio Code extensions..."
 code --install-extension arcticicestudio.nord-visual-studio-code
+code --install-extension bradlc.vscode-tailwindcss
 code --install-extension editorconfig.editorconfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension julialang.language-julia
