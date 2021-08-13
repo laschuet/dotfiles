@@ -52,6 +52,16 @@ else
 fi
 
 echo
+echo "Remove default directories in user's home"
+rm -r $HOME/Documents
+rm -r $HOME/Downloads
+rm -r $HOME/Music
+rm -r $HOME/Pictures
+rm -r $HOME/Public
+rm -r $HOME/Templates
+rm -r $HOME/Videos
+
+echo
 echo "Create symbolic links"
 ln -rsf alacritty.yml $HOME/.alacritty.yml
 ln -rsf makepkg.conf $HOME/.makepkg.conf
