@@ -53,6 +53,7 @@ fi
 
 echo
 echo "Remove default directories in user's home"
+rm -r $HOME/Desktop
 rm -r $HOME/Documents
 rm -r $HOME/Downloads
 rm -r $HOME/Music
