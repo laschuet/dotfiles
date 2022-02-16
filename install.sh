@@ -43,11 +43,11 @@ echo "Installing Julia..."
 if [[ -f /bin/julia ]]; then
     echo "Julia is already installed" 
 else
-    curl -O https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.2-linux-x86_64.tar.gz
-    tar xfz julia-1.6.2-linux-x86_64.tar.gz
-    rm julia-1.6.2-linux-x86_64.tar.gz
-    sudo mv julia-1.6.2 /opt
-    sudo ln -s /opt/julia-1.6.2 /opt/julia
+    curl -O https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.2-linux-x86_64.tar.gz
+    tar xfz julia-1.7.2-linux-x86_64.tar.gz
+    rm julia-1.7.2-linux-x86_64.tar.gz
+    sudo mv julia-1.7.2 /opt
+    sudo ln -s /opt/julia-1.7.2 /opt/julia
     sudo ln -s /opt/julia/bin/julia /bin/julia
 fi
 
